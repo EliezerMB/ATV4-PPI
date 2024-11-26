@@ -1,7 +1,7 @@
 import express from "express";
 import session from "express-session";
 import cookieParser from "cookie-parser";
-import path from 'path'; // Importando o módulo path
+import path from 'path';
 
 const app = express();
 
@@ -12,7 +12,7 @@ app.use(session({
     cookie: {
         secure: false,
         httpOnly: true,
-        maxAge: 1000 * 60 * 30 // 30 minutos
+        maxAge: 1000 * 60 * 30
     }
 }));
 
