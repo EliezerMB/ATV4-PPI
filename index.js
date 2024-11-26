@@ -34,7 +34,7 @@ function menu(req, resp) {
     `);
 }
 
-function cadastrodeComidas(req, resp) {
+ffunction cadastrodeComidas(req, resp) {
     const nome = req.body.nome || '';
     const regiao = req.body.regiao || '';
     const horario = req.body.horario || '';
@@ -57,6 +57,7 @@ function cadastrodeComidas(req, resp) {
         errors.estacao = "Estação para o Consumo é obrigatória!";
     }
 
+    // Se houver erros, exiba o formulário novamente com mensagens
     if (Object.keys(errors).length > 0) {
         resp.write(`
             <html lang="pt-br">
@@ -66,28 +67,28 @@ function cadastrodeComidas(req, resp) {
                     <title>Cadastro de Comida :-)</title>
                 </head>
                 <body>
-                    <div class="Container text-center">
+                    <div class="container text-center">
                         <h1>Cadastro de Pratos</h1>
                         <form class="row g-3" method="POST" action="/cadastro" novalidate>
                             <div class="col-md-4">
                                 <label for="nome" class="form-label">Nome do Prato</label>
                                 <input type="text" name="nome" class="form-control" id="nome" placeholder="Exemplo: Arroz Carreteiro" value="${nome}" required>
-                                <div class="text-danger">${errors.nome || ''}</div> <!-- Mensagem de erro -->
+                                <div class="invalid-feedback">${errors.nome || ''}</div> <!-- Mensagem de erro -->
                             </div>
                             <div class="col-md-4">
                                 <label for="regiao" class="form-label">Região Típica</label>
                                 <input type="text" name="regiao" class="form-control" id="regiao" placeholder="Exemplo: Centro-Oeste e Nordeste" value="${regiao}" required>
-                                <div class="text-danger">${errors.regiao || ''}</div> <!-- Mensagem de erro -->
+                                <div class="invalid-feedback">${errors.regiao || ''}</div> <!-- Mensagem de erro -->
                             </div>
                             <div class="col-md-4">
                                 <label for="horario" class="form-label">Melhor Horário Para o Consumo</label>
                                 <input type="text" name="horario" class="form-control" id="horario" placeholder="Exemplo: Café da Manhã - Almoço - Jantar - Ceia" value="${horario}" required>
-                                <div class="text-danger">${errors.horario || ''}</div> <!-- Mensagem de erro -->
+                                <div class="invalid-feedback">${errors.horario || ''}</div> <!-- Mensagem de erro -->
                             </div>
                             <div class="col-md-6">
                                 <label for="estacao" class="form-label">Melhor Estação para o Consumo</label>
                                 <input type="text" name="estacao" class="form-control" id="estacao" placeholder="Exemplo: Inverno" value="${estacao}" required>
-                                <div class="text-danger">${errors.estacao || ''}</div> <!-- Mensagem de erro -->
+                                <div class="invalid-feedback">${errors.estacao || ''}</div> <!-- Mensagem de erro -->
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary" type="submit">Cadastrar</button>
