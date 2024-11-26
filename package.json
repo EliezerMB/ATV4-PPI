@@ -1,0 +1,25 @@
+{
+  "name": "atv3-ppi",
+  "version": "1.0.0",
+  "description": "atividade de PPI 3",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eliezer M Barbosa",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EliezerMB/ATV3-PPI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EliezerMB/ATV3-PPI/issues"
+  },
+  "homepage": "https://github.com/EliezerMB/ATV3-PPI#readme",
+  "dependencies": {
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
+  }
+}
