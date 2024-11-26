@@ -22,7 +22,7 @@ const porta = 3000;
 const host = "0.0.0.0";
 
 const listaComida = [];
-const usuarios = [{ usuario: 'admin', senha: '123' }];
+const usuarios = [{ usuario: 'eli', senha: '460' }];
 
 function verificarAutenticacao(req, resp, next) {
     if (req.session.usuarioLogado) {
