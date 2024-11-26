@@ -57,7 +57,6 @@ function cadastrodeComidas(req, resp) {
         errors.estacao = "Estação para o Consumo é obrigatória!";
     }
 
-    // Se houver erros, exiba o formulário novamente com mensagens
     if (Object.keys(errors).length > 0) {
         resp.write(`
             <html lang="pt-br">
