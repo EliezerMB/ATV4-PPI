@@ -34,7 +34,7 @@ function menu(req, resp) {
     `);
 }
 
-ffunction cadastrodeComidas(req, resp) {
+function cadastrodeComidas(req, resp) {
     const nome = req.body.nome || '';
     const regiao = req.body.regiao || '';
     const horario = req.body.horario || '';
